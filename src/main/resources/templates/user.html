@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p th:text="'姓名：'+${uname}"></p>
+<p th:text="'年龄：'+${uage}"></p>
+<p th:text="'姓名Request：'+${requestname}"></p>
+<p th:text="'姓名Session：'+${session.sessionname}"></p>
+<p th:text="'MQMsg：'+${mqmsg}"></p>
+
+<table>
+    <thead>
+    <th>序号</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    </thead>
+    <tbody>
+    <tr th:each="entries,stat:${schools}" th:style="'background-color:'+@{${stat.odd}?'#F2F2F2'}">
+        <td th:text="${stat.count}"></td>
+        <td th:text="${entries['sname']}"></td>
+        <td th:text="${entries['syear']}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
