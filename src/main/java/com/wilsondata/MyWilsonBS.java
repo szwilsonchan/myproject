@@ -8,7 +8,7 @@ public class MyWilsonBS
 	public void updBS(String sql) throws Exception     
 	{          
 		MyWilsonData myData=null;
-		//myData = new MyWilsonData();
+		myData = new MyWilsonData();
 		//myData.updWilsonData("update jobs set jname='Good Jobs'");
 	}
 }
